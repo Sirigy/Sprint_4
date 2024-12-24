@@ -7,6 +7,8 @@ import org.openqa.selenium.support.PageFactory;
 
 public class HomePage extends BasePage{
 
+    private static final String PAGE_URL = "https://qa-scooter.praktikum-services.ru/";
+
     @FindBy(xpath = ".//button[@class='Button_Button__ra12g']")
     private WebElement upperButton; // Верхняя кнопка "Заказать".
 
@@ -32,6 +34,10 @@ public class HomePage extends BasePage{
     public void jumpToLowerButton(){
         WebElement element = lowerButton;
         ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", element);
+    }
+
+    public void getPageUrl(){
+        driver.get(PAGE_URL);
     }
 }
 

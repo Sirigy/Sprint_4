@@ -18,7 +18,7 @@ public abstract class BaseTest {
     public void setUp() {
 
         //Метод,который получает значение системного свойства browser.
-        browser = System.getProperty("browser", "chrome");
+        browser = System.getProperty("browser", "firefox");
 
         //Это блок условий, который проверяет, какое значение хранится в переменной
         if (browser.equals("chrome")) {
